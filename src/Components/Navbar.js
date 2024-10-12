@@ -3,11 +3,10 @@ import { useState } from 'react';
 const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
   return (
     <nav className="bg-[#374151] p-4 fixed w-full top-0">
       <div className="container mx-auto flex justify-between items-center">
@@ -39,7 +38,7 @@ const Navbar = () => {
 
         {/* Links (hidden on smaller screens, shown on larger screens) */}
         <div className={`md:flex md:items-center space-x-4 ${isOpen ? "block" : "hidden"} md:block`}>
-          <a href="#" className="text-white hover:text-gray-300">
+          <a href="#home" className="text-white hover:text-gray-300">
             Home
           </a>
           <a href="#about" className="text-white hover:text-gray-300">
