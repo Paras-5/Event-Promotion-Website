@@ -14,8 +14,14 @@ const RegistrationForm = () => {
     };
   
     const handleSubmit = async (e) => {
-      e.preventDefault();
-      // handle form submission
+        e.preventDefault();
+        try {
+          await axios.post('http://localhost:5000/api/register', formData);
+          alert('Registration successful, email sent!');
+        } catch (error) {
+          console.error(error);
+          alert('Error registering.');
+        }
     };
   
     return (
