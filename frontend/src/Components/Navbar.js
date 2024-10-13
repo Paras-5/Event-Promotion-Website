@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
 const Navbar = () => {
-
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
   return (
     <nav className="bg-[#374151] p-4 fixed w-full top-0">
       <div className="container mx-auto flex justify-between items-center">
@@ -36,8 +36,8 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Links (hidden on smaller screens, shown on larger screens) */}
-        <div className={`md:flex md:items-center space-x-4 ${isOpen ? "block" : "hidden"} md:block`}>
+        {/* Links (visible on larger screens) */}
+        <div className="hidden md:flex md:items-center space-x-4">
           <a href="#home" className="text-white hover:text-gray-300">
             Home
           </a>
@@ -54,20 +54,22 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu (visible only when the hamburger is clicked) */}
-      <div className={`md:hidden ${isOpen ? "block" : "hidden"}`}>
-        <a href="#home" className="block text-white py-2 px-4 hover:bg-blue-500">
-          Home
-        </a>
-        <a href="#about" className="block text-white py-2 px-4 hover:bg-blue-500">
-          About
-        </a>
-        <a href="#schedule" className="block text-white py-2 px-4 hover:bg-blue-500">
-          Schedule
-        </a>
-        <a href="#register" className="block text-white py-2 px-4 hover:bg-blue-500">
-          Register
-        </a>
-      </div>
+      {isOpen && (
+        <div className="md:hidden">
+          <a href="#home" className="block text-white py-2 px-4 hover:bg-blue-500">
+            Home
+          </a>
+          <a href="#about" className="block text-white py-2 px-4 hover:bg-blue-500">
+            About
+          </a>
+          <a href="#schedule" className="block text-white py-2 px-4 hover:bg-blue-500">
+            Schedule
+          </a>
+          <a href="#register" className="block text-white py-2 px-4 hover:bg-blue-500">
+            Register
+          </a>
+        </div>
+      )}
     </nav>
   );
 };
