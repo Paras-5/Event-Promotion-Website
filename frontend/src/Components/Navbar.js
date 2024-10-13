@@ -38,7 +38,7 @@ const Navbar = () => {
 
         {/* Links (hidden on smaller screens, shown on larger screens) */}
         <div className={`md:flex md:items-center space-x-4 ${isOpen ? "block" : "hidden"} md:block`}>
-          <a href="#" className="text-white hover:text-gray-300">
+          <a href="#home" className="text-white hover:text-gray-300">
             Home
           </a>
           <a href="#about" className="text-white hover:text-gray-300">
