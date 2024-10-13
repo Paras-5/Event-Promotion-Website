@@ -118,7 +118,7 @@ router.post("/register", async (req, res) => {
         </ul>
         <p>We look forward to seeing you there and appreciate your commitment to these crucial global topics!</p>
         <p>Join us at the Global Water, Energy, and Climate Conference (GWECCC) to explore key topics related to sustainability and climate security.</p>
-        <a href="https://gweccc2025.com/register" class="button">Register Now</a>
+        <a href="https://eventpromotor.netlify.app/#register" class="button">Register Now</a>
         <hr />
         <p><strong>Your Information:</strong></p>
         <p>
